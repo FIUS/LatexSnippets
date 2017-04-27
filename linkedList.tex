@@ -1,0 +1,23 @@
+%Init
+\usepackage{tikz}
+
+\usetikzlibrary{shapes}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+
+%In Document
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}[start chain, node distance=10mm]
+  \node[on chain, circle, scale=0.6, fill] (n0) {};
+  \foreach \c [count=\x from 0] [count=\y from 1] in {A,BBBC,C,D} % Put Content in here
+  {
+    \node[on chain, rectangle split, rectangle split parts=2, rectangle split horizontal, draw] (\y) {\c};
+    \node[on chain, circle, scale=0.6, fill, xshift=-22mm] (n\y){};
+    \path[draw, thick, -latex', xshift=8.8mm] (n\x) -- (\y);
+  }
+  \node[on chain, rectangle, xscale=0.2, fill] (e) {};
+  \path[draw, thick, xshift=8.8mm] (n\y) -- (e);
+\end{tikzpicture}
+\end{figure}
+
