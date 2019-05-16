@@ -1,4 +1,4 @@
-Copyright (C) Tim Neumann<br>
+Copyright (C) the project authors<br>
 Licensed under CC-BY-NC-SA<br>
 
 This is a collection of useful Latex snippets.<br>
